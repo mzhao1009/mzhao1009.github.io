@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mzhao1009.github.io/sitemap.xml
