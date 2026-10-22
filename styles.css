@@ -268,7 +268,7 @@ nav a:hover::after { right: 0; }
   line-height: 1.06;
 }
 
-.section-heading h2, .publications-heading h2, .about-title h2 {
+.section-heading h2, .publications-heading h2, .awards-heading h2, .about-title h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(40px, 5.1vw, 70px);
   letter-spacing: -.04em;
@@ -384,6 +384,72 @@ nav a:hover::after { right: 0; }
 .publication-link svg { width: 24px; transition: transform .2s ease, color .2s ease; }
 .publication-link:hover svg { transform: translate(3px,-3px); color: var(--accent); }
 
+.awards {
+  padding-top: 125px;
+  padding-bottom: 135px;
+}
+
+.awards-heading .section-kicker { margin-bottom: 22px; }
+
+.award-card {
+  margin-top: 62px;
+  padding: 42px 0;
+  display: grid;
+  grid-template-columns: minmax(150px, .55fr) minmax(0, 1.8fr) 110px;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.award-year span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  color: var(--accent);
+}
+
+.award-year p, .award-label {
+  margin: 10px 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.award-year p { color: var(--ink-soft); }
+.award-label { color: var(--accent); }
+
+.award-body h3 {
+  margin: 9px 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(31px, 3.6vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+.award-body > p:last-child {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.award-mark {
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  letter-spacing: .08em;
+}
+
 .about { background: #17393d; color: var(--white); }
 .about-inner { padding-top: 125px; padding-bottom: 130px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; }
 .about-title .section-kicker { margin-bottom: 24px; }
@@ -395,8 +461,7 @@ nav a:hover::after { right: 0; }
 .profile-links svg { width: 13px; }
 
 footer { background: #0d2528; color: var(--white); padding: 85px clamp(24px, 7vw, 110px) 30px; }
-footer > div:first-child { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; padding-bottom: 80px; }
-footer p { margin: 0; max-width: 580px; font-family: Georgia, serif; font-size: clamp(30px, 4vw, 54px); line-height: 1.1; }
+.footer-contact { display: flex; justify-content: flex-end; padding-bottom: 55px; }
 .footer-email { color: #e3a081; font-family: var(--font-geist-mono), monospace; font-size: 15px; user-select: all; }
 .footer-bottom { padding-top: 25px; border-top: 1px solid rgba(255,255,255,.16); display: flex; justify-content: space-between; color: rgba(255,255,255,.45); font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
 
@@ -412,6 +477,8 @@ footer p { margin: 0; max-width: 580px; font-family: Georgia, serif; font-size: 
   .featured-mark { max-width: 520px; width: 100%; }
   .publications-heading { grid-template-columns: 1fr; gap: 20px; }
   .publication { grid-template-columns: 110px 1fr 45px; gap: 22px; }
+  .award-card { grid-template-columns: 125px 1fr 90px; gap: 28px; }
+  .award-mark { width: 76px; height: 76px; }
   .about-inner { grid-template-columns: 1fr; gap: 60px; }
 }
 
@@ -425,7 +492,7 @@ footer p { margin: 0; max-width: 580px; font-family: Georgia, serif; font-size: 
   .hero-card { min-height: 340px; padding: 24px; }
   .monogram { min-height: 185px; font-size: 72px; }
   .section-shell { padding-left: 20px; padding-right: 20px; }
-  .research, .publications { padding-top: 85px; padding-bottom: 90px; }
+  .research, .publications, .awards { padding-top: 85px; padding-bottom: 90px; }
   .research-heading-main .section-kicker { margin-bottom: 18px; }
   .research-heading-main h2 { font-size: clamp(38px, 11vw, 50px); line-height: 1.08; }
   .research-grid { grid-template-columns: 1fr; margin-top: 50px; }
@@ -440,9 +507,11 @@ footer p { margin: 0; max-width: 580px; font-family: Georgia, serif; font-size: 
   .publication-meta p { margin: 0; text-align: right; max-width: 180px; }
   .publication-link { grid-column: 2; grid-row: 2; }
   .publication-link span { display: none; }
+  .award-card { grid-template-columns: 1fr; gap: 24px; margin-top: 46px; }
+  .award-mark { justify-self: start; width: 66px; height: 66px; font-size: 24px; }
   .about-inner { padding-top: 85px; padding-bottom: 90px; }
   footer { padding: 70px 20px 25px; }
-  footer > div:first-child { align-items: flex-start; flex-direction: column; padding-bottom: 65px; }
+  .footer-contact { justify-content: flex-start; padding-bottom: 55px; }
   .footer-bottom { gap: 18px; flex-direction: column; }
 }
 
